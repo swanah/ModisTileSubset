@@ -1,0 +1,43 @@
+<module>
+    <manifestVersion>1.0.0</manifestVersion>
+    <symbolicName>ModisTileSubsetter</symbolicName>
+    <name>TileSubsetter</name>
+    <version>1.0</version>
+
+    <!-- TODO - As needed, adapt metadata elements here -->
+    <description>BEAM ModisTileSubsetter</description>
+    <vendor>Brockmann Consult GmbH</vendor>
+    <contactAddress>Max Planck Str.2, 21502 Geesthacht (Germany)</contactAddress>
+    <copyright>(C) 2010 by Brockmann Consult GmbH</copyright>
+    <url>http://envisat.esa.int/beam</url>
+    <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <changelog>
+        <![CDATA[ ]]>
+    </changelog>
+
+    <categories>Processor,VISAT</categories>
+
+    <dependency>
+        <module>beam-core</module>
+    </dependency>
+    <dependency>
+        <module>beam-gpf</module>
+    </dependency>
+    <dependency>
+        <module>beam-visat</module>
+        <optional>true</optional>
+    </dependency>
+
+    <extension point="beam-ui:actions">
+        <!-- -->
+        <action>
+            <class>org.esa.beam.visat.actions.DefaultOperatorAction</class>
+            <id>ModisTileSubsetter</id>
+            <operatorName>mtsVgt</operatorName>
+            <text>MTS...</text>
+            <dialogTitle>MTS</dialogTitle>
+            <targetProductNameSuffix>_mts</targetProductNameSuffix>
+        </action>
+        <!-- -->
+    </extension>
+</module>
